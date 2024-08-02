@@ -33,6 +33,62 @@
         padding: 50px;
         margin: 20px;
       }
+
+        .progress-container {
+            display: flex;
+            align-items: center;
+            width: 80%;
+            margin: 50px auto;
+        }
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            position: relative;
+            margin-top: 10px;
+        }
+        .progress-bar {
+            position: relative;
+            width: 100%;
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+        }
+        .progress-bar::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            background-color: #4285f4;
+            border-radius: 4px 0 0 4px;
+        }
+        .progress-step {
+            position: absolute;
+            top: -7px;
+            height: 20px;
+            width: 20px;
+            background-color: #e0e0e0;
+            border: 3px solid #4285f4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .progress-step::after {
+            content: '✔';
+            font-size: 12px;
+            color: white;
+        }
+        .progress-step.completed {
+            background-color: #4285f4;
+        }
+        .progress-label {
+            width: 25%;
+            text-align: center;
+        }
+        .progress-label.completed {
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -43,6 +99,8 @@
         <img src="./image/41hpozSZASL._SCLZZZZZZZ__SY300_SX300_.jpg" width="70" 
         height="80">
     </div>
+
+    
     <br>
     <hr>
     <br>
@@ -53,7 +111,22 @@
         <input type="range" value="100">
         <input type="range" value="40">
         <input type="range" value="0"></center> -->
-        <center><img src="./image/range-bar.png"> </center>
+       
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress-step completed" style="left: 0%;"></div>
+            <div class="progress-step completed" style="left: 50%;"></div>
+            <div class="progress-step" style="left: 75%;"></div>
+            <div class="progress-step" style="left: 100%;"></div>
+        </div>
+    </div>
+    <div class="progress-labels">
+        <div class="progress-label completed">Ordered</div>
+        <div class="progress-label completed">Shipped</div>
+        <div class="progress-label">Out for delivery</div>
+        <div class="progress-label">Delivered</div>
+    </div>
+    <br><br><br>
     </div>
     <div id="last">
         <div class="last-div1">
@@ -65,6 +138,8 @@
                 <a href="https://www.amazon.in/gp/help/customer/display.html?nodeId=GSL37WQTJZUYA9QE">requst cancellation</a>
             </p>
         </div>
+        
+            
 
         <div class="last-div2">
             <h1>shipping Address </h1>
@@ -84,7 +159,7 @@
             height="60">
             <a href="https://www.amazon.in/gp/your-account/order-details?orderID=406-3904654-1837152&ref=ppx_pt2_dt_b_view_detail"> View order detail</a>
         </div>
-    <div></div>
-    
+        </div>
+        
 </body>
 </html>
