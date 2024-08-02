@@ -1,0 +1,17 @@
+/* .div1{
+    /* }
+.div1 #head1{
+    color: dimgrey;
+}
+.div1 #head2{
+    color: rgb(168, 80, 80); 
+}*/
+
+} */
+
+div {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+  }
